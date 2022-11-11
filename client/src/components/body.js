@@ -1,35 +1,26 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Tools from './Tools';
+import Error404 from './Error404';
 
-const tools = [
-  {
-    id: '1',
-    val: 'Attendace tracker',
-  },
-  {
-    id: '2',
-    val: 'Budget Tracker',
-  },
-];
-
-const toolsMapped = tools.map((item) => {
+function body() {
   return (
-    <div
-      className='mx-auto w-3/4 bg-gray-200 border rounded mb-2'
-      key={item.id}>
-      <h1 className='text-xl py-4 px-3'>{item.val}</h1>
+    <div className='grow'>
+      <Router>
+        <Routes>
+          <Route
+            path='/tools'
+            element={<Tools />}
+          />
+          <Route
+            exact
+            path='*'
+            element={<Error404 />}
+          />
+        </Routes>
+      </Router>
     </div>
   );
-});
-
-const body = () => {
-  return (
-    <div className='grow bg-whitee'>
-      <div className='mx-auto mt-10 w-3/4'>
-        <h1 className='text-3xl'>Tools</h1>
-      </div>
-      {toolsMapped}
-    </div>
-  );
-};
+}
 
 export default body;

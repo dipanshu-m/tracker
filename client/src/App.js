@@ -1,7 +1,7 @@
 import React from 'react';
-import Footer from './components/footer';
-import Header from './components/header';
-import Body from './components/body';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Body from './components/Body';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
     <>
       <Router>
         <Header />
-        <Body />
+      </Router>
+      <Body />
+      <Router>
         <Footer />
       </Router>
     </>

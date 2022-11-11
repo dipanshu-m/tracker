@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
     <div>
@@ -8,25 +10,27 @@ function Footer() {
         </span>
         <ul className='flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0'>
           <li>
-            <a
-              href='asd'
+            <Link
+              to='/about'
               className='mr-4 hover:underline md:mr-6 '>
               About
-            </a>
+            </Link>
           </li>
           <li>
             <a
-              href='sadj'
-              className='mr-4 hover:underline md:mr-6'>
+              href='https://github.com/dipanshu-m/tracker'
+              className='mr-4 hover:underline md:mr-6'
+              target='_blank'
+              rel='noopener noreferrer'>
               GitHub
             </a>
           </li>
           <li>
             <a
+              className='mr-4 hover:underline md:mr-6'
               href='mailto:d1p@duck.com'
-              target={'_blank'}
-              rel='noreferrer'
-              className='hover:underline'>
+              target='_blank'
+              rel='noopener noreferrer'>
               Contact
             </a>
           </li>
